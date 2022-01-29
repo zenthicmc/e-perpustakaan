@@ -1,0 +1,43 @@
+
+.cover {
+    height: 100%;
+    width: 33%;
+    justify-content: center;
+    text-align: center;
+}
+
+.cover img {
+    height: 500px;
+    width: 400px;
+    float:right;
+}
+
+.info-main {
+    width: 60%;
+    height: auto;
+    padding-left: 3%;
+    word-break: break-all;
+}
+
+@media only screen and (max-width: 768px) {
+    .cover {
+        position: absolute;
+    }
+    .container h2 {
+        position: absolute;
+    }
+    .container hr {
+        float: left;
+    }
+
+    .cover img {
+        float: left;
+        margin-left: 10px;
+    }
+
+    .info-main {
+        margin-top: 33rem;
+        padding: 2px 20px;
+        width:100%;
+    }
+}

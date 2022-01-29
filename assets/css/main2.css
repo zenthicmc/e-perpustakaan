@@ -1,0 +1,26 @@
+body {
+    overflow-x: hidden;
+}
+
+#readmore {
+    width: 20%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    .portfolio a i {
+        visibility: hidden;
+        width: 100%;
+        position: absolute;
+        
+    }
+
+    #readmore {
+        height: 45px;
+    }
+
+    #about p{
+        padding: 20px 20px;
+    }
+}
