@@ -4,15 +4,54 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>E-Perpus | Home</title>
-    <link rel="stylesheet" href="./assets/css/main2.css">
+    <link rel="stylesheet" href="assets/css/main2.css">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-
 <body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="72">
+<style>
+    body {
+        overflow-x: hidden;
+    }
+
+    #readmore {
+        width: 20%;
+        margin: auto;
+        margin-top: 20px;
+    }
+
+@media only screen and (max-width: 768px) {
+    html, body {
+        overflow-x: hidden;
+    }
+    body {
+        position: relative
+    }
+
+    #navbar-responsive {
+        font-size: 40px;    
+    }
+
+    .portfolio a i {
+        visibility: hidden;
+        width: 100%;
+        position: absolute;
+        
+    }
+
+    #readmore {
+        height: 45px;
+        width: 100px;
+    }
+
+    #about p{
+        padding: 20px 20px;
+    }
+}
+</style>
     <nav class="navbar navbar-light navbar-expand-lg bg-secondary text-uppercase" id="mainNav">
         <div class="container"><a class="navbar-brand" href="index.php">E-PERPUS</a><button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler text-white bg-primary navbar-toggler-right text-uppercase rounded" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -26,7 +65,7 @@
     </nav>
     <header class="text-center text-white bg-primary masthead" style="padding-top: 100px;"><img class="img-fluid d-block mx-auto mb-5" src="assets/img/—Pngtree—tutorial%20and%20e-book%20illustration%20concept_4188248.png" style="width: 300px;height: 300px;margin-top: 0px;">
         <div class="container">
-            <h1>E-Perpustakaan</h1>
+            <h1 id="navbar-responsive">E-Perpustakaan</h1>
             <hr class="star-light">
             <h2 class="font-weight-light mb-0">Baca Buku Gratis Dimana &amp; Kapan Saja</h2>
         </div>
