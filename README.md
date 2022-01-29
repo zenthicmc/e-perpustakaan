@@ -1,7 +1,7 @@
 # E-Perpustakaan
 Responsive Web Application E-Perpustakaan Using SQL Database
 
-Demo: http://e-perpustakaan.rf.gd/
+Demo: https://e-perpus-zen.000webhostapp.com/
 # Teknologi
 > HTML
 >
