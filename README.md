@@ -16,5 +16,5 @@ Demo: http://e-perpustakaan.rf.gd/
 
 # Cara Pemakaian
 1. Download Repository Ini
-2. Setting db.php dengan detail databasemu
-3. Import perpus.sql ke databasemu 
+2. Setting `db.php` dengan detail databasemu
+3. Import `perpus.sql` ke databasemu 
