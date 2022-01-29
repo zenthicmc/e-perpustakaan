@@ -1,6 +1,12 @@
+<?php
+    include('functions.php');
+    list($result,$jumlahData,$dataAwal,$dataPerHalaman,$halamanAktif,$jumlahHalaman) = pagination(6);
+    if($dataAwal == 0) {$dataAwal = 1;}
+    if($dataAwal == $dataPerHalaman) {$dataAwal = 1;$dataPerHalaman = $jumlahData-$dataPerHalaman;}
+?>
+
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -26,18 +32,42 @@
         </div>
     </nav>
     <section id="books" class="portfolio">
-        <?php 
-        require 'functions.php'; 
-        $datas = query("SELECT * FROM books ORDER BY tgl_input ASC LIMIT 6");
-        ?>
+        <style>
+            #book-list:hover {
+                opacity: 0.9;
+            }
+        </style>
         <div class="container">
             <h2 class="text-uppercase text-center text-secondary">BOOKS</h2>
             <hr class="star-dark mb-5">
             <div class="row">
-            <?php foreach ($datas as $data) : ?>
-                <div class="col-md-6 col-lg-4"><a href="view.php?id=<?= $data['id_buku'] ?>" class="d-block mx-auto portfolio-item" ><img class="img-fluid" src="assets/img/<?= $data['cover'] ?>" style="height: 500px;width: 400px;"></a></div>
+            <?php foreach ($result as $data) : ?>
+                <div class="col-md-6 col-lg-4" id="book-list"><a href="view.php?id=<?= $data['id_buku'] ?>" class="d-block mx-auto portfolio-item" ><img class="img-fluid" src="assets/img/<?= $data['cover'] ?>" style="height: 500px;width: 400px;"></a></div>
             <?php endforeach; ?>
-            </div>   
+            </div>
+            <div class="col">
+                <nav class="d-lg-flex justify-content-lg-end dataTables_paginate paging_simple_numbers">
+                    <ul class="pagination" style="margin:auto;">
+                        <?php if($halamanAktif > 1):?>
+                            <li class="page-item"><a class="page-link" href="?page=<?= $halamanAktif-1?>" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+                         <?php else:?>
+                            <li class="page-item disabled"><a class="page-link" href="?page=<?= $halamanAktif-1?>" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+                        <?php endif;?>
+                        <?php for($i = 1; $i <= $jumlahHalaman; $i++) :?>
+                        <?php if($i==$halamanAktif) :?>
+                            <li class="page-item active"><a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a></li>
+                        <?php else:?>
+                            <li class="page-item"><a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a></li>
+                        <?php endif;?>
+                        <?php endfor; ?>
+                        <?php if($halamanAktif < $jumlahHalaman):?>
+                            <li class="page-item"><a class="page-link" href="?page=<?= $halamanAktif+1?>" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+                        <?php else:?>
+                            <li class="page-item disabled"><a class="page-link" href="?page=<?= $halamanAktif-1?>" aria-label="Previous"><span aria-hidden="true">»</span></a></li>
+                        <?php endif;?>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </section>
     <footer class="text-center footer">
@@ -69,5 +99,4 @@
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/freelancer.js"></script>
 </body>
-
 </html>
