@@ -21,15 +21,14 @@
 <style>
 .cover {
     height: 100%;
-    width: 33%;
-    justify-content: center;
-    text-align: center;
+    width: 400px;
+    margin-left: 7rem;
 }
 
 .cover img {
     height: 500px;
     width: 400px;
-    float:right;
+    float: left;
 }
 
 .info-main {
@@ -39,9 +38,20 @@
     word-break: break-all;
 }
 
+@media only screen and (max-width: 1280px) {
+    .cover {
+        margin-left: 4.4rem;
+    }
+
+@media only screen and (max-width: 1024px) {
+    .cover {
+        margin-left: 2rem;
+    }
+
 @media only screen and (max-width: 768px) {
     .cover {
         position: absolute;
+        margin-left: 0px;
     }
     .container h2 {
         position: absolute;
@@ -62,6 +72,7 @@
         width:100%;
     }
 }
+
 </style>
     <nav class="navbar navbar-light navbar-expand-lg bg-secondary text-uppercase" id="mainNav">
         <div class="container"><a class="navbar-brand" href="index.php">E-PERPUS</a><button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler text-white bg-primary navbar-toggler-right text-uppercase rounded" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
@@ -76,10 +87,10 @@
     </nav>
     <section id="read" class="read">
         <div class="container">
-            <h2 class="text-uppercase text-center text-secondary d-xxl-flex justify-content-xxl-start">VIEW</h2>
-            <hr class="float-start d-xxl-flex star-dark mb-5" style="width: 400px;">
+            <h2 class="text-uppercase text-center text-secondary" style="float:left;">VIEW</h2>
+            <hr class="star-dark mb-5" style="width: 400px;float:left;position:absolute;margin-top:50px;">
         </div>
-        <div style="width: 100%;height: auto;display: flex;">
+        <div style="width: 100%;height: auto;display: flex;margin-top:100px;">
         <?php foreach ($datas as $data) : ?>
             <?php $filename = $data['file']; ?>
             <div class="cover">
