@@ -7,8 +7,6 @@ Demo: https://e-perpus-zen.000webhostapp.com/
 >
 > CSS
 >
-> JS
->
 > PHP
 >
 > BOOTSTRAP
