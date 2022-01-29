@@ -8,7 +8,8 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
     <title>E-Perpus | View</title>
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
@@ -19,6 +20,9 @@
 </head>
 <body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="72">
 <style>
+html {
+    overflow-x: hidden;
+}
 .cover {
     height: 100%;
     width: 400px;
@@ -42,11 +46,20 @@
     .cover {
         margin-left: 4.4rem;
     }
+}
+
+@media only screen and (max-width: 1280px) {
+    .cover {
+        margin-left: 4.4rem;
+    }
+}
 
 @media only screen and (max-width: 1024px) {
     .cover {
         margin-left: 2rem;
     }
+}
+
 
 @media only screen and (max-width: 768px) {
     .cover {
@@ -71,8 +84,12 @@
         padding: 2px 20px;
         width:100%;
     }
-}
 
+    body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+}
 </style>
     <nav class="navbar navbar-light navbar-expand-lg bg-secondary text-uppercase" id="mainNav">
         <div class="container"><a class="navbar-brand" href="index.php">E-PERPUS</a><button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler text-white bg-primary navbar-toggler-right text-uppercase rounded" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
@@ -88,7 +105,7 @@
     <section id="read" class="read">
         <div class="container">
             <h2 class="text-uppercase text-center text-secondary" style="float:left;">VIEW</h2>
-            <hr class="star-dark mb-5" style="width: 400px;float:left;position:absolute;margin-top:50px;">
+            <hr class="star-dark mb-5" style="width: 400px;float:left;position:absolute;margin-top:4rem;">
         </div>
         <div style="width: 100%;height: auto;display: flex;margin-top:100px;">
         <?php foreach ($datas as $data) : ?>
