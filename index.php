@@ -106,7 +106,7 @@
             <div class="row">
                 <div class="col-md-4 mb-5 mb-lg-0">
                     <h4 class="text-uppercase mb-4">Location</h4>
-                    <p><strong>Lorem Ipsum</strong>&nbsp;is simply dummy text of the printing and typesetting<br><br></p>
+                    <p>Lorem Ipsum is simply dummy text of the printing and type setting</p>
                 </div>
                 <div class="col-md-4 mb-5 mb-lg-0">
                     <h4 class="text-uppercase">OUR SOCIAL MEDIA</h4>
@@ -119,7 +119,7 @@
                 </div>
                 <div class="col-md-4">
                     <h4 class="text-uppercase mb-4">About</h4>
-                    <p class="lead mb-0"><span>E-Perpus is a online platform to read books at anywhere &amp; anytime</span></p>
+                    <p><span>E-Perpus is a online platform to read books at anywhere &amp; anytime</span></p>
                 </div>
             </div>
         </div>
@@ -152,5 +152,4 @@
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/freelancer.js"></script>
 </body>
-
 </html>
